@@ -1,13 +1,230 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+  --login-bg: #f8f3ff;
+  --title-bg: rgba(247, 161, 26, 1);
+  --button-bg: #674baf;
+  --light-pink: #e882e8;
+  --image-bg: #eadbff;
+  --botones: #004990;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-image: linear-gradient(to top, #07eefa8e 0%, #0044fff3 100%);
+}
+
+.login-container {
+  height: 43.75em;
+  width: 80em;
+  margin: 6em auto;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+
+  overflow: hidden;
+}
+
+.login-info-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 0.5rem;
+  background-color: var(--login-bg);
+}
+
+.image-container {
+  width: 100%;
+  object-fit: cover;
+  margin: 0;
+  background-color: var(--image-bg);
+  box-sizing: border-box;
+}
+
+.title {
+  text-transform: capitalize;
+  font-size: 2.25rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--title-bg);
+}
+
+.social-login {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+
+.social-login-element {
+  width: 25.5rem;
+  height: 3.75rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 72, 0);
+  border-color: none;
+  color: white;
+  margin-top: 100px;
+}
+
+.social-login-element img {
+  width: 1.875rem;
+  height: 1.875rem;
+  position: relative;
+  top: 0;
+  left: -0.625rem;
+}
+
+.social-login-element:hover {
+  background-color: rgb(255, 0, 0);
+}
+
+.login-info-container > p {
+  font-size: 1.25em;
+  margin-top: 1.5em;
+}
+
+.inputs-container {
+  height: 55%;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.input,
+.btn {
+  width: 90%;
+  height: 3.125rem;
+  font-size: 1em;
+}
+
+.input {
+  padding-left: 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  box-sizing: border-box;
+}
+
+.input:hover {
+  border: 2px solid var(--button-bg);
+}
+
+.btn {
+  width: 80%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--botones);
+  cursor: pointer;
+}
+
+.inputs-container p {
+  margin: 0;
+}
+
+.span {
+  color: var(--light-pink);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-invitado {
+  width: 80%;
+  height:70px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--botones);
+  cursor: pointer;
+}
+
+.image_title {
+  background: rgba(0, 0, 0, 0.698);
+  margin-top: -10px;
+  padding: 0;
+}
+.image-test {
+  padding: 0;
+  margin: 0;
+}
+.image_title a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 20px;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: justify;
+  height: 200px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  font-style: none;
+  list-style: none;
+}
+.img-container {
+  width: 120%;
+  /* height:120%; */
+}
+
+
+@media screen and (max-width: 1000px) {
+  .login-container {
+    width: 70%;
+    margin-top: 3rem;
+  }
+  .login-info-container {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .image-container {
+    display: none;
+  }
+  ul{
+    display:none;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .login-container {
+    width: 90%;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  .login-container {
+    height: 90%;
+  }
+  
+
+  .social-login {
+    flex-direction: column;
+    align-items: center;
+    height: 30%;
+  }
+
+  .login-info-container > p {
+    margin: 0;
+  }
 }
